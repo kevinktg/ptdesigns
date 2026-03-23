@@ -83,7 +83,7 @@ const Showcase = () => {
                                 <span className="text-gold">Architecture</span>
                             </h2>
                         </div>
-                        <div className="px-4 py-1.5 rounded-full border border-white/10 glass-refracted text-[0.55rem] uppercase tracking-[0.2em] font-bold">
+                        <div className="px-3 py-1 rounded-full border border-white/5 bg-white/5 backdrop-blur-sm text-[10px] uppercase tracking-[0.3em] font-bold text-zinc-400">
                             PTDESIGNS®
                         </div>
                     </div>
@@ -117,7 +117,7 @@ const Showcase = () => {
                                 <span className="text-gold">Fit-Outs</span>
                             </h2>
                         </div>
-                        <div className="px-4 py-1.5 rounded-full border border-white/10 glass-refracted text-[0.55rem] uppercase tracking-[0.2em] font-bold">
+                        <div className="px-3 py-1 rounded-full border border-white/5 bg-white/5 backdrop-blur-sm text-[10px] uppercase tracking-[0.3em] font-bold text-zinc-400">
                             PTDESIGNS®
                         </div>
                     </div>
@@ -151,7 +151,7 @@ const Showcase = () => {
                                 <span className="text-gold">Architecture</span>
                             </h2>
                         </div>
-                        <div className="px-4 py-1.5 rounded-full border border-white/10 glass-refracted text-[0.55rem] uppercase tracking-[0.2em] font-bold">
+                        <div className="px-3 py-1 rounded-full border border-white/5 bg-white/5 backdrop-blur-sm text-[10px] uppercase tracking-[0.3em] font-bold text-zinc-400">
                             PTDESIGNS®
                         </div>
                     </div>

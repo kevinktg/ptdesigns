@@ -39,10 +39,10 @@ const Welcome = () => {
                 <p className="text-gold uppercase tracking-[0.2em] text-[0.7rem] font-bold opacity-60 mb-4">
                     Philosophy & Vision
                 </p>
-                <div className="w-full md:w-[95%] font-bold tracking-tighter">
+                <div className="w-full font-bold tracking-tighter">
                     <div className="w-full welcome-text flex flex-col justify-center items-start">
                         {welcomeLines.map((text, index) => (
-                            <h1 key={index} className="relative block text-zinc-900 !leading-[0.85]">
+                            <h1 key={index} className="relative block text-zinc-900 !leading-[0.8] text-[clamp(2.5rem,12vw,14rem)]">
                                 {text}
                                 <span className="clip-text-welcome text-white glow-gold">{text}</span>
                             </h1>

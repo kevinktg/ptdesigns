@@ -127,11 +127,11 @@ const Gallery = () => {
                     <h3 className="text-gold font-medium italic opacity-80">(Scroll)</h3>
                 </div>
                 <div className="gallery-bottomText">
-                    <div className='w-auto max-w-[90%] flex justify-center items-center gap-6 bg-black/60 backdrop-blur-xl p-6 rounded-full border border-white/10'>
-                        <BsFillPlusCircleFill className='w-8 h-8 text-gold glow-gold' />
-                        <h3 className="text-zinc-300 font-medium leading-relaxed max-w-2xl">PTDesigns delivers refined aesthetics and considered interiors — creating architecture that endures in Perth and beyond.</h3>
+                    <div className='w-auto max-w-[85%] flex justify-center items-center gap-4 bg-black/50 backdrop-blur-xl p-3 px-6 rounded-full border border-white/10'>
+                        <BsFillPlusCircleFill className='w-6 h-6 text-gold glow-gold' />
+                        <h3 className="text-zinc-300 text-xs md:text-sm font-medium leading-relaxed max-w-xl">PTDesigns delivers refined aesthetics and considered interiors — creating architecture that endures.</h3>
                     </div>
-                    <div className="relative z-9 w-64 h-[0.15rem] bg-white/10 mt-6 overflow-hidden rounded-full self-center">
+                    <div className="relative z-9 w-48 h-[0.1rem] bg-white/10 mt-4 overflow-hidden rounded-full self-center">
                         <div className="progress-line absolute z-10 bg-gold glow-gold w-[33%] h-full top-0 left-0"></div>
                     </div>
                 </div>
@@ -144,11 +144,11 @@ const Gallery = () => {
                     <h3 className="text-gold font-medium italic opacity-80">(Scroll)</h3>
                 </div>
                 <div className="gallery-bottomText">
-                    <div className='w-auto max-w-[90%] flex justify-center items-center gap-6 bg-black/60 backdrop-blur-xl p-6 rounded-full border border-white/10'>
-                        <BsFillPlusCircleFill className='w-8 h-8 text-gold glow-gold' />
-                        <h3 className="text-zinc-300 font-medium leading-relaxed max-w-2xl">PTDesigns delivers refined aesthetics and considered interiors — creating architecture that endures in Perth and beyond.</h3>
+                    <div className='w-auto max-w-[85%] flex justify-center items-center gap-4 bg-black/50 backdrop-blur-xl p-3 px-6 rounded-full border border-white/10'>
+                        <BsFillPlusCircleFill className='w-6 h-6 text-gold glow-gold' />
+                        <h3 className="text-zinc-300 text-xs md:text-sm font-medium leading-relaxed max-w-xl">PTDesigns delivers refined aesthetics and considered interiors — creating architecture that endures.</h3>
                     </div>
-                    <div className="relative z-9 w-64 h-[0.15rem] bg-white/10 mt-6 overflow-hidden rounded-full self-center">
+                    <div className="relative z-9 w-48 h-[0.1rem] bg-white/10 mt-4 overflow-hidden rounded-full self-center">
                         <div className="progress-line absolute z-10 bg-gold glow-gold w-[67%] h-full top-0 left-0"></div>
                     </div>
                 </div>
@@ -161,11 +161,11 @@ const Gallery = () => {
                     <h3 className="text-gold font-medium italic opacity-80">(Scroll)</h3>
                 </div>
                 <div className="gallery-bottomText">
-                    <div className='w-auto max-w-[90%] flex justify-center items-center gap-6 bg-black/60 backdrop-blur-xl p-6 rounded-full border border-white/10'>
-                        <BsFillPlusCircleFill className='w-8 h-8 text-gold glow-gold' />
-                        <h3 className="text-zinc-300 font-medium leading-relaxed max-w-2xl">PTDesigns delivers refined aesthetics and considered interiors — creating architecture that endures in Perth and beyond.</h3>
+                    <div className='w-auto max-w-[85%] flex justify-center items-center gap-4 bg-black/50 backdrop-blur-xl p-3 px-6 rounded-full border border-white/10'>
+                        <BsFillPlusCircleFill className='w-6 h-6 text-gold glow-gold' />
+                        <h3 className="text-zinc-300 text-xs md:text-sm font-medium leading-relaxed max-w-xl">PTDesigns delivers refined aesthetics and considered interiors — creating architecture that endures.</h3>
                     </div>
-                    <div className="relative z-9 w-64 h-[0.15rem] bg-white/10 mt-6 overflow-hidden rounded-full self-center">
+                    <div className="relative z-9 w-48 h-[0.1rem] bg-white/10 mt-4 overflow-hidden rounded-full self-center">
                         <div className="progress-line absolute z-10 bg-gold glow-gold w-[100%] h-full top-0 left-0"></div>
                     </div>
                 </div>
