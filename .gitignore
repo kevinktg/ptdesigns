@@ -28,6 +28,7 @@ yarn-error.log*
 # Planning/Internal
 .planning/
 .serena/
+.mcp.json
 SITE_WATCH.md
 REDESIGN_TEAM.md
 in-memoria.db
