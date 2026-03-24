@@ -27,24 +27,33 @@ There are no tests configured.
 
 **Stack:** React 19 + Vite + Tailwind CSS v4 (via `@tailwindcss/vite` plugin) + GSAP + Lenis smooth scroll.
 
-**Routing:** React Router v7 with `createBrowserRouter`. Single route at `/ptdesigns` (GitHub Pages base path). `MainLayout` wraps all pages via `<Outlet />`.
+**Routing:** React Router v7 with `createBrowserRouter`. Single route at `/` (root). `MainLayout` wraps all pages via `<Outlet />`.
 
-**Smooth Scrolling:** Dual system — GSAP `ScrollSmoother` (wraps content in `#smooth-wrapper` / `#smooth-content`) and Lenis (`frontend/src/lib/lenis.js`). Both are initialized in `MainLayout`.
+**Smooth Scrolling:** Dual system — GSAP `ScrollSmoother` (wraps content in `#smooth-wrapper` / `#smooth-content`) and Lenis (`frontend/src/lib/lenis.js`). Both are initialized in `MainLayout`. Note: `ScrollTrigger.refresh()` fires after a 4-second delay to account for the preloader animation completing before scroll positions are calculated.
 
 **Layout hierarchy:**
-- `MainLayout` — persistent shell: PreloaderII, Logo, ReserveBtn, Navbar, Footer, FooterTitle. Registers GSAP ScrollTrigger + ScrollSmoother plugins.
-- `Home` — page-level section composition: Hero → Welcome → Choose → Gallery → MapLink → MarqueeSticky → StickyCols → Activities → Showcase → Feedback → FooterBanner.
+- `MainLayout` — persistent shell: PreloaderII, Logo, ReserveBtn, Navbar, Footer, FooterTitle. Registers GSAP `ScrollTrigger` + `ScrollSmoother` plugins.
+- `Home` — page-level section composition in order: Hero → Welcome → Choose → Gallery → MapLink → MarqueeSticky → StickyCols → Activities → Showcase → Feedback → FooterBanner.
 
-**Styling approach:** Mix of Tailwind utility classes and section-specific CSS files (`index.css` for globals, plus per-component `.css` files in component directories). CSS custom properties defined in `:root` (`--base-100`, `--base-200`, `--base-300`). Font: Inter (Google Fonts CDN).
+**Preloaders:** Two components exist — `Preloader.jsx` (unused) and `PreloaderII.jsx` (active, rendered in MainLayout).
 
-**Animations:** GSAP with `@gsap/react` (`useGSAP` hook) and ScrollTrigger throughout components. Animations are scroll-driven, not time-based.
+**Data:** Static content lives in `frontend/src/constants/` — `activites.js`, `feedback.js`, `welcome.js`.
 
-**Deployment:** GitHub Pages via GitHub Actions (`.github/workflows/deploy.yml`). Builds from `frontend/`, deploys `frontend/dist/`. Base path is `/ptdesigns/` (configured in both `vite.config.js` and Router).
+**Styling approach:** Mix of Tailwind utility classes and section-specific CSS files (`index.css` for globals, plus per-component `.css` files). CSS custom properties defined in `:root`:
+- `--base-100` (#050505), `--base-200` (#111111), `--base-300` (#f5f5f5) — dark/light backgrounds and text
+- `--gold` (#BFA77A), `--silver` (#E2E2E2) — luxury accent colours
+- `--gold-glow`, `--gold-glow-strong` — box-shadow presets for glowing effects
+
+**Fonts (Google Fonts CDN):** Inter (body), Montserrat (accent), Playfair Display (all headings h1–h3, serif with negative letter-spacing).
+
+**Animations:** GSAP with `@gsap/react` (`useGSAP` hook) and ScrollTrigger throughout components. Animations are scroll-driven, not time-based. Always import plugins from `gsap/all` or `gsap/ScrollTrigger` and register with `gsap.registerPlugin()` before use.
+
+**Deployment:** GitHub Pages via GitHub Actions (`.github/workflows/deploy.yml`). Builds from `frontend/`, deploys `frontend/dist/`. Vercel deployment also configured (see git history).
 
 ## Key Conventions
 
 - Components are in `frontend/src/components/{ComponentName}/` with `.jsx` + optional `.css` file
 - Pages in `frontend/src/pages/{PageName}/`
 - Single layout in `frontend/src/layouts/`
-- GSAP plugins must be registered with `gsap.registerPlugin()` before use
 - ESLint ignores unused vars starting with uppercase or underscore (`varsIgnorePattern: '^[A-Z_]'`)
+- `Intro.jsx` and `Outro.jsx` exist in components but are not currently used
