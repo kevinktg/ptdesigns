@@ -8,6 +8,7 @@ import "./preloaderII.css";
 gsap.registerPlugin(SplitText);
 export default function PreloaderII() {
     useGSAP(() => {
+        document.fonts.ready.then(() => {
         function createSplitTexts(elements) {
             const splits = {};
             elements.forEach(({ key, selector, type }) => {
@@ -118,6 +119,7 @@ export default function PreloaderII() {
                 },
                 "<"
             );
+        }); // end document.fonts.ready
     }, []);
 
     return (
